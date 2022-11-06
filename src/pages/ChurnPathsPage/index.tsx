@@ -11,6 +11,8 @@ export const ChurnPathsPage = () => {
   const onNodeClick = (e: any) => {
     // We can redirect to cohorts page with the selected id
     // id: e.data.id
+    // Also, in order to get rid of this if statement
+    // backend may return a field so we can check if the value has it or not
     if (
       e.name === 'purchase_item_x' ||
       e.name === 'convert_currency' ||
@@ -23,7 +25,7 @@ export const ChurnPathsPage = () => {
   return (
     <div className="w-full">
       <Header title="Churn Paths" />
-      <div className="bg-gray-100 h-full p-8 text-center">
+      <div className="bg-gray-100 h-full p-8 text-center position-relative">
         <ReactECharts
           style={{ width: '100%', textAlign: 'center', height: 400 }}
           option={constants.TREE_CHART_OPTIONS}
