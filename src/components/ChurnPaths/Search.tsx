@@ -24,8 +24,8 @@ export default function Search() {
         value={state.searchText}
         options={constants.HEADER_SEARCH_OPTIONS.map((option) => option.title)}
         onChange={(e, newValue) => onChange(e, newValue)}
-        renderInput={(params) => <TextField {...params} />}
-        style={{ width: 120 }}
+        renderInput={(params) => <TextField {...params} margin="none" />}
+        style={{ width: 160 }}
       />
     </div>
   );

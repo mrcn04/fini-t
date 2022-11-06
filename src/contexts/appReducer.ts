@@ -5,7 +5,7 @@ interface IAction {
 
 export const initialState = {
   searchText: 'user_login',
-  headerToggle: 'missing',
+  headerToggle: 'Missing',
   pastDay: 14,
 };
 
@@ -14,8 +14,7 @@ export const reducer = (state: typeof initialState, action: IAction) => {
 
   switch (type) {
     case 'TOGGLE':
-      let value = payload === 'missing' ? 'missing' : 'happened';
-      return { ...state, headerToggle: value };
+      return { ...state, headerToggle: payload };
     case 'SEARCH_TEXT':
       return { ...state, searchText: payload };
     case 'PAST':

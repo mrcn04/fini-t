@@ -2,7 +2,7 @@ import Dropdown from './Dropdown';
 import Search from './Search';
 
 import SearchIcon from '@mui/icons-material/Search';
-import Switch from './Switch';
+import SwitchComponent from './Switch';
 
 export default function ChurnPathsHeaderOptions() {
   const search = () => {
@@ -12,7 +12,7 @@ export default function ChurnPathsHeaderOptions() {
   return (
     <div className="flex items-center">
       <Search />
-      <Switch />
+      <SwitchComponent />
       <Dropdown />
       <div className="cursor-pointer ml-4" onClick={search}>
         <SearchIcon />

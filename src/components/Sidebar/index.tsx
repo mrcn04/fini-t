@@ -1,4 +1,4 @@
-import logo from '../../assets/react.svg';
+import logo from '../../assets/images/fini.png';
 import { useNavigate } from 'react-router-dom';
 import constants from '../../utils/constants';
 
@@ -21,8 +21,7 @@ export default function Sidebar() {
   return (
     <div className="p-8 h-screen bg-white" style={{ minWidth: '260px' }}>
       <div className="flex pb-4 justify-center">
-        <img src={logo} className="mr-4" />
-        <h1 style={{ color: '#1D84FF' }}>fini</h1>
+        <img src={logo} className="mr-4" style={{ height: 40 }} />
       </div>
       <ul className="mt-5">
         {constants.SIDEBAR_ITEMS.map(
