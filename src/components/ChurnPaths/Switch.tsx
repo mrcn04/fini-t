@@ -66,7 +66,7 @@ export default function SwitchComponent() {
   };
 
   return (
-    <div className="mr-2">
+    <div className="mr-2 w-48 text-center">
       <span className="font-bold">{state.headerToggle}</span>
       <FormControlLabel
         control={<MaterialUISwitch sx={{ mr: 1 }} onChange={onChange} />}
