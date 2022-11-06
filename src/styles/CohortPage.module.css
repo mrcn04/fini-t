@@ -1,0 +1,18 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem;
+  background-color: #fff;
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 1rem 5rem;
+}
+
+.wrapper p {
+  font-weight: 500;
+}
+
+.wrapper span {
+  font-weight: 600;
+}
