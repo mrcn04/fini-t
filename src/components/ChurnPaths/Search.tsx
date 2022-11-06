@@ -1,13 +1,18 @@
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
+import { useContext } from 'react';
+import { AppContext } from '../../contexts/appContext';
+import constants from '../../utils/constants';
 
 export default function Search() {
-  const top100Films = [
-    { title: 'The Shawshank Redemption', year: 1994 },
-    { title: 'The Godfather', year: 1972 },
-    { title: 'The Godfather: Part II', year: 1974 },
-    { title: 'The Dark Knight', year: 2008 },
-  ];
+  const { state, dispatch } = useContext(AppContext);
+
+  const onChange = (e: any, newValue: any) => {
+    dispatch({
+      type: 'SEARCH_TEXT',
+      payload: newValue,
+    });
+  };
 
   return (
     <div className="flex items-center mr-2">
@@ -16,7 +21,9 @@ export default function Search() {
         id="free-solo-demo"
         freeSolo
         size="small"
-        options={top100Films.map((option) => option.title)}
+        value={state.searchText}
+        options={constants.HEADER_SEARCH_OPTIONS.map((option) => option.title)}
+        onChange={(e, newValue) => onChange(e, newValue)}
         renderInput={(params) => <TextField {...params} />}
         style={{ width: 120 }}
       />

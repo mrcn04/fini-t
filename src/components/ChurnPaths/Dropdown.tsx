@@ -3,13 +3,17 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Search from '../ChurnPaths/Search';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { AppContext } from '../../contexts/appContext';
 
 export default function Dropdown() {
-  const [age, setAge] = useState('14');
+  const { state, dispatch } = useContext(AppContext);
 
   const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value);
+    dispatch({
+      type: 'PAST',
+      payload: event.target.value,
+    });
   };
 
   return (
@@ -19,7 +23,7 @@ export default function Dropdown() {
         <Select
           labelId="demo-select-small"
           id="demo-select-small"
-          value={age}
+          value={state.pastDay}
           onChange={handleChange}>
           <MenuItem value={14}>14d</MenuItem>
           <MenuItem value={28}>28d</MenuItem>

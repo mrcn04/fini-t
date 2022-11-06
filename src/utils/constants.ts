@@ -19,6 +19,7 @@ export default {
       path: '/actions',
     },
   ],
+  HEADER_SEARCH_OPTIONS: [{ title: 'user_login' }, { title: 'another_event' }],
   TREE_CHART_OPTIONS: {
     series: [
       {

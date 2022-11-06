@@ -4,9 +4,9 @@ interface IAction {
 }
 
 export const initialState = {
-  searchText: '',
+  searchText: 'user_login',
   headerToggle: 'missing',
-  pastDay: '14d',
+  pastDay: 14,
 };
 
 export const reducer = (state: typeof initialState, action: IAction) => {
@@ -16,10 +16,8 @@ export const reducer = (state: typeof initialState, action: IAction) => {
     case 'TOGGLE':
       let value = payload === 'missing' ? 'missing' : 'happened';
       return { ...state, headerToggle: value };
-
     case 'SEARCH_TEXT':
       return { ...state, searchText: payload };
-
     case 'PAST':
       return { ...state, pastDay: payload };
 

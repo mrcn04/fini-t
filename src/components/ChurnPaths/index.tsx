@@ -2,14 +2,17 @@ import Dropdown from './Dropdown';
 import Search from './Search';
 
 import SearchIcon from '@mui/icons-material/Search';
+import Switch from './Switch';
 
 export default function ChurnPathsHeaderOptions() {
-  const search = () => {};
+  const search = () => {
+    // fetch new data with the given props on context state
+  };
 
   return (
     <div className="flex items-center">
       <Search />
-      <div className="mr-2 font-bold">Missing: ...</div>
+      <Switch />
       <Dropdown />
       <div className="cursor-pointer ml-4" onClick={search}>
         <SearchIcon />
