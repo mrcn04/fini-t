@@ -9,9 +9,9 @@ import { EventSourcesPage } from './pages/EventSourcesPage';
 import { ChurnPathsPage } from './pages/ChurnPathsPage';
 import { CohortsPage } from './pages/CohortsPage';
 import { ActionsPage } from './pages/ActionsPage';
-import { AppContext } from './contexts/app';
+import { AppContext } from './contexts/appContext';
 import { useReducer } from 'react';
-import { reducer, initialState } from './reducer/appReducer';
+import { reducer, initialState } from './contexts/appReducer';
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
