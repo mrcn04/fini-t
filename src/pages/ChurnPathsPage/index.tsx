@@ -2,8 +2,6 @@ import Header from '../../components/Header';
 import ReactECharts from 'echarts-for-react';
 import constants from '../../utils/constants';
 import { useNavigate } from 'react-router-dom';
-import { useContext } from 'react';
-import { AppContext } from '../../contexts/appContext';
 
 export const ChurnPathsPage = () => {
   const navigate = useNavigate();
