@@ -65,14 +65,14 @@ export const CohortsPage = ({
       <Header title="Cohorts" />
       {fetched ? (
         <div className="bg-gray-100 h-full py-4 px-32 flex flex-col">
-          <div className="my-4 font-bold">
+          <div className="mt-4 font-bold">
             <h6>User cohort statistics for path</h6>
             <ReactECharts
               style={{ width: '100%', textAlign: 'center', height: 150 }}
               option={constants.TREE_CHART_OPTIONS_PIECE}
             />
           </div>
-          <div className="my-4">
+          <div>
             <h6 className="font-bold">Cohort Statistics</h6>
             <StatisticsTable
               avSpending={current?.avSpending}

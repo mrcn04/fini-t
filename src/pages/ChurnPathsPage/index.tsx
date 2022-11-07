@@ -2,8 +2,11 @@ import Header from '../../components/Header';
 import ReactECharts from 'echarts-for-react';
 import constants from '../../utils/constants';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { AppContext } from '../../contexts/appContext';
 
 export const ChurnPathsPage = () => {
+  const { state } = useContext(AppContext);
   const navigate = useNavigate();
 
   const onNodeClick = (e: any) => {
@@ -26,7 +29,7 @@ export const ChurnPathsPage = () => {
       <div className="bg-gray-100 h-full p-8 text-center position-relative">
         <ReactECharts
           style={{ width: '100%', textAlign: 'center', height: 400 }}
-          option={constants.TREE_CHART_OPTIONS}
+          option={state.chartOptions}
           onEvents={{ click: (e: any) => onNodeClick(e) }}
         />
       </div>

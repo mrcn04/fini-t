@@ -58,7 +58,7 @@ export const data = {
 };
 
 export const data2 = {
-  name: 'user_login',
+  name: 'user_login2',
   id: 2,
   label: {
     color: '#fff',
@@ -69,7 +69,7 @@ export const data2 = {
   },
   children: [
     {
-      name: 'transaction_failed',
+      name: 'transaction_failed2',
       id: 4126,
       label: nodeLabelStyle,
       children: [
@@ -86,7 +86,7 @@ export const data2 = {
       ],
     },
     {
-      name: 'user_error_treshold',
+      name: 'user_error_treshold2',
       id: 4136,
       label: nodeLabelStyle,
       children: [
@@ -98,7 +98,7 @@ export const data2 = {
       ],
     },
     {
-      name: 'fraud_deactivation',
+      name: 'fraud_deactivation2',
       id: 4146,
       label: nodeLabelStyle,
     },

@@ -19,7 +19,7 @@ export default function Dropdown() {
   return (
     <div className="flex items-center">
       <span className="font-bold">Past</span>
-      <FormControl sx={{ m: 1, minWidth: 80 }} size="small">
+      <FormControl sx={{ m: 1, minWidth: 80, margin: '0 8px' }} size="small">
         <Select
           labelId="demo-select-small"
           id="demo-select-small"

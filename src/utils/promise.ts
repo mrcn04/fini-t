@@ -1,4 +1,4 @@
-import { pieceData, data, data2 } from '../data';
+import { pieceData } from '../data';
 
 /* 
   This is a API call representation
@@ -7,17 +7,6 @@ import { pieceData, data, data2 } from '../data';
   of the technology
   Ex. Axios, Axios with its own layer imp, React-Query etc.
 */
-
-export const dataFetcher = (
-  id: string,
-): Promise<typeof data | typeof data2> => {
-  return new Promise((resolve, reject) => {
-    const exampleData = id === '1' ? data : data2;
-    setTimeout(() => {
-      resolve(exampleData);
-    }, 300);
-  });
-};
 
 export const pieceDataFetcher = (id: string): Promise<typeof pieceData> => {
   return new Promise((resolve, reject) => {
